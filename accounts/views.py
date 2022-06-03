@@ -43,14 +43,6 @@ class UserCreateAndLoginView(CreateView):
         return response
 
 
-class OnlyYouMixin(UserPassesTestMixin):
-    raise_exception = True
-
-    def test_func(self):
-        user = self.request.user
-        return user.pk == self.kwargs['pk']
-
-
 class UserDetail(OnlyYouMixin, DetailView):
     model = User
     template_name = 'accounts/user_detail.html'
