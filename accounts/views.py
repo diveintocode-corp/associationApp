@@ -32,7 +32,7 @@ class OnlyYouMixin(UserPassesTestMixin):
 class UserCreateAndLoginView(CreateView):
     form_class = CustomUserCreationForm
     template_name = "accounts/signup.html"
-    success_url = reverse_lazy("blog:index")
+    success_url = reverse_lazy("book:index")
 
     def form_valid(self, form):
         response = super().form_valid(form)

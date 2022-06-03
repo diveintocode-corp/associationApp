@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig',
+    'books.apps.BooksConfig',
     'accounts.apps.AccountsConfig',
 ]
 
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'blog.middleware.auth.AuthMiddleware',
+    'books.middleware.auth.AuthMiddleware',
 ]
 
 ROOT_URLCONF = 'associationApp.urls'
@@ -131,6 +131,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/accounts/login'
-LOGIN_REDIRECT_URL = '/blog'
+LOGIN_REDIRECT_URL = '/book'
 LOGOUT_REDIRECT_URL = '/accounts/login'
 AUTH_USER_MODEL = 'accounts.CustomUser'

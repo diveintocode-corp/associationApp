@@ -3,19 +3,19 @@
 {% block main %}
 <p>
   <strong>Title:</strong>
-  {{article.title}}
+  {{book.title}}
 </p>
 
 <p>
   <strong>Content:</strong>
-  {{article.content}}
+  {{book.content}}
 </p>
-<form action="{% url 'blog:delete' article.id %}" method="post">
+<form action="{% url 'books:delete' book.id %}" method="post">
   {% csrf_token %}
   <input type="submit" value="Delete">
 </form>
 
 <br>
 
-<a href="{% url 'blog:index' %}">Back</a>
+<a href="{% url 'books:index' %}">Back</a>
 {% endblock %}

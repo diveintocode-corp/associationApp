@@ -4,16 +4,16 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Blog</title>
-    <link rel="stylesheet" href="{% static 'blog/css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <title>Book</title>
+    <link rel="stylesheet" href="{% static 'books/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'books/css/style.css' %}">
   </head>
 
   <body>
     <nav>
       <ul>
         {% if user.is_authenticated %}
-        <li><a href="{% url 'blog:index' %}">ブログ一覧</a></li>
+        <li><a href="{% url 'books:index' %}">ブログ一覧</a></li>
         <li><a href="{% url 'logout' %}">ログアウト</a></li>
         <li><a href="{% url 'user_detail' user.pk %}">会員情報</a></li>
         {% else %}
