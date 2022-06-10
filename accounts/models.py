@@ -39,3 +39,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def email_user(self, subject, message, from_email=None, **kwargs):
         send_mail(subject, message, from_email, [self.email], **kwargs)
+
+    def __str__(self):
+        return f'id: {self.id}, username: {self.username}'
